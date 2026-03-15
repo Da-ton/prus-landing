@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#003153",
+                        "accent": "#003052",
+                        "background-light": "#ffffff",
+                        "background-muted": "#f8fafc",
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "8px",
+                        "lg": "12px",
+                        "xl": "16px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light text-slate-900 antialiased selection:bg-primary/10 transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/90 backdrop-blur-md px-6 md:px-10 lg:px-20 py-4">
+<div class="mx-auto flex max-w-[1200px] items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">precision_manufacturing</span>
+<h2 class="text-primary text-xl font-bold tracking-tight">Evgenia Prus</h2>
+</div>
+<div class="hidden lg:flex items-center gap-10">
+<nav class="flex items-center gap-8">
+<a class="text-slate-600 hover:text-primary text-sm font-medium transition-colors" href="#about">Экспертиза</a>
+<a class="text-slate-600 hover:text-primary text-sm font-medium transition-colors" href="#process">Процесс</a>
+<a class="text-slate-600 hover:text-primary text-sm font-medium transition-colors" href="#pricing">Тарифы</a>
+</nav>
+                        <a class="text-slate-600 hover:text-primary text-sm font-medium transition-colors flex items-center gap-1" href="tel:+79141178383">
+                            <span class="material-symbols-outlined text-lg">call</span>
+                            +7 (914) 117-83-83
+                        </a>
+                        <a class="flex items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-semibold transition-all hover:bg-slate-800" href="#contact">
+                            Обсудить проект
+                        </a>
+</div>
+<button class="lg:hidden text-slate-900">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-1">
+<div class="mx-auto max-w-[1200px] px-6 md:px-10 lg:px-20">
+<!-- Hero Section -->
+<div class="py-16 md:py-24 lg:py-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="flex flex-col gap-8">
+<div class="space-y-6">
+<div class="inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-slate-600">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+                                    Международная логистика и ВЭД
+                                </div>
+<h1 class="text-slate-900 text-5xl md:text-6xl font-extrabold leading-[1.1] tracking-tight">
+                                    Производство в Китае <br/>
+<span class="text-primary">как ваш актив</span>
+</h1>
+<p class="text-slate-500 text-lg leading-relaxed max-w-lg">
+                                    Управляем цепочками поставок от аудита фабрик до белого импорта. Помогаем масштабировать бизнес через прямой доступ к мировым производственным мощностям.
+                                </p>
+</div>
+<div class="flex flex-wrap gap-4">
+<a class="flex items-center justify-center gap-2 rounded-lg h-14 px-8 bg-primary text-white text-lg font-bold transition-all hover:bg-slate-800" href="#contact">
+                                    Начать проект
+                                </a>
+<a class="flex items-center justify-center gap-2 rounded-lg h-14 px-8 border border-slate-200 text-slate-900 text-lg font-semibold hover:bg-slate-50 transition-all" href="#process">
+                                    Наш подход
+                                </a>
+</div>
+</div>
+<div class="relative">
+                <div class="relative z-10 w-full overflow-hidden rounded-2xl bg-slate-100 aspect-[4/5] shadow-xl">
+                    <div class="h-full w-full bg-cover bg-[center_bottom]" style="background-image: url('Фото/photo_2026-03-05_15-19-17.jpg');"></div>
+                </div>
+<div class="absolute -bottom-6 -right-6 z-20 hidden md:block">
+<div class="bg-white p-6 rounded-xl shadow-2xl border border-slate-100 flex items-center gap-4">
+<div class="h-12 w-12 rounded-full bg-primary/5 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">shield_with_heart</span>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Гарантии</p>
+<p class="text-sm font-bold text-slate-900">100% Белый импорт</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Consolidated Expertise Section -->
+<section class="py-24 border-t border-slate-100" id="about">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<div class="lg:col-span-5 space-y-8">
+<h2 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">Партнерство в основе каждого проекта</h2>
+<p class="text-lg text-slate-500 leading-relaxed">
+                                    Я работаю с Китаем более двух лет, постоянно находясь в контакте с производителями. Мой опыт предпринимателя с 2018 года позволяет видеть проект целиком: от юнит-экономики до технических допусков производства.
+                                </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<p class="font-bold text-slate-900">Прямой доступ к производству</p>
+<p class="text-slate-500 text-sm">База из 15,000+ проверенных фабрик по всей стране.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<p class="font-bold text-slate-900">Юридическая прозрачность</p>
+<p class="text-slate-500 text-sm">Официальное таможенное оформление и полный пакет документов.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-background-muted p-8 rounded-xl border border-slate-100 hover:border-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">search_insights</span>
+<h3 class="text-lg font-bold text-slate-900 mb-2">Поиск и аудит</h3>
+<p class="text-sm text-slate-500">Глубокая проверка поставщиков, анализ мощностей и репутации фабрик.</p>
+</div>
+<div class="bg-background-muted p-8 rounded-xl border border-slate-100 hover:border-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">precision_manufacturing</span>
+<h3 class="text-lg font-bold text-slate-900 mb-2">OEM/ODM Проекты</h3>
+<p class="text-sm text-slate-500">Запуск производства под вашим брендом с контролем качества на каждом этапе.</p>
+</div>
+<div class="bg-background-muted p-8 rounded-xl border border-slate-100 hover:border-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">conveyor_belt</span>
+<h3 class="text-lg font-bold text-slate-900 mb-2">Оборудование</h3>
+<p class="text-sm text-slate-500">Прямые поставки сложных производственных линий и спецтехники.</p>
+</div>
+<div class="bg-background-muted p-8 rounded-xl border border-slate-100 hover:border-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">local_shipping</span>
+<h3 class="text-lg font-bold text-slate-900 mb-2">Логистика</h3>
+<p class="text-sm text-slate-500">Организация оптимальных маршрутов и полное сопровождение ВЭД.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Categories -->
+<section class="py-24 bg-primary rounded-2xl px-6 md:px-12 text-white overflow-hidden">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+<div class="max-w-xl">
+<h2 class="text-3xl font-bold mb-4">Основные направления</h2>
+<p class="text-white/70">Специализируемся на сложных товарных группах и промышленном оборудовании для российского бизнеса.</p>
+</div>
+<div class="flex gap-4">
+<div class="text-right">
+<p class="text-2xl font-bold">15к+</p>
+<p class="text-xs text-white/50 uppercase">База фабрик</p>
+</div>
+<div class="w-px h-10 bg-white/20"></div>
+<div class="text-right">
+<p class="text-2xl font-bold">100%</p>
+<p class="text-xs text-white/50 uppercase">Контроль</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="p-6 rounded-lg bg-white/5 border border-white/10 flex flex-col gap-4 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-white/60">chair</span>
+<span class="font-medium text-sm">Мебель и интерьер</span>
+</div>
+<div class="p-6 rounded-lg bg-white/5 border border-white/10 flex flex-col gap-4 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-white/60">construction</span>
+<span class="font-medium text-sm">Оборудование</span>
+</div>
+<div class="p-6 rounded-lg bg-white/5 border border-white/10 flex flex-col gap-4 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-white/60">shopping_bag</span>
+<span class="font-medium text-sm">Для маркетплейсов</span>
+</div>
+<div class="p-6 rounded-lg bg-white/5 border border-white/10 flex flex-col gap-4 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-white/60">architecture</span>
+<span class="font-medium text-sm">Стройматериалы</span>
+</div>
+</div>
+</section>
+<!-- Factory Gallery Section -->
+<section class="py-24">
+<div class="flex flex-col gap-10">
+<div class="space-y-2">
+<h2 class="text-3xl font-bold text-slate-900 tracking-tight">Реальные производства и контроль</h2>
+<p class="text-slate-500 max-w-2xl">Репортажные кадры с аудитов фабрик и инспекций готовой продукции нашими специалистами в Гуанчжоу, Шэньчжэне и Нинбо.</p>
+</div>
+                <div class="relative group">
+                    <div id="gallery-container" class="flex gap-4 overflow-x-auto hide-scrollbar snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0 scroll-smooth">
+                    <div class="min-w-[300px] md:min-w-[400px] aspect-[4/3] rounded-xl overflow-hidden snap-start flex-shrink-0 bg-slate-100">
+                        <img alt="Factory Image 2" class="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-500" src="Фото/photo_2026-03-05_15-20-08.jpg"/>
+                    </div>
+                    <div class="min-w-[300px] md:min-w-[400px] aspect-[4/3] rounded-xl overflow-hidden snap-start flex-shrink-0 bg-slate-100">
+                        <img alt="Factory Image 3" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="Фото/photo_2026-03-05_15-26-45.jpg"/>
+                    </div>
+                    <div class="min-w-[300px] md:min-w-[400px] aspect-[4/3] rounded-xl overflow-hidden snap-start flex-shrink-0 bg-slate-100">
+                        <img alt="Factory Image 4" class="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-500" src="Фото/photo_2026-03-05_15-27-34.jpg"/>
+                    </div>
+</div>
+                    <div class="hidden md:flex absolute top-1/2 -translate-y-1/2 -left-4 -right-4 justify-between pointer-events-none">
+                        <button id="gallery-prev" class="h-10 w-10 rounded-full bg-white shadow-lg border border-slate-100 flex items-center justify-center pointer-events-auto hover:bg-slate-50 transition-colors">
+                            <span class="material-symbols-outlined text-primary">chevron_left</span>
+                        </button>
+                        <button id="gallery-next" class="h-10 w-10 rounded-full bg-white shadow-lg border border-slate-100 flex items-center justify-center pointer-events-auto hover:bg-slate-50 transition-colors">
+                            <span class="material-symbols-outlined text-primary">chevron_right</span>
+                        </button>
+                    </div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-24 border-t border-slate-100" id="process">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">Рабочий процесс</h2>
+<p class="text-slate-500 max-w-xl mx-auto">Четкая методология, гарантирующая результат на каждом этапе поставки.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="relative group">
+<div class="text-7xl md:text-8xl font-light text-primary/10 absolute -top-8 -left-4 z-0 group-hover:text-primary/20 transition-all duration-500 select-none">01</div>
+<div class="relative z-10 space-y-3 pt-4">
+<h4 class="font-bold text-slate-900">Аналитика</h4>
+<p class="text-sm text-slate-500">Изучаем ТЗ и подбираем 5-10 производителей по базе.</p>
+</div>
+</div>
+<div class="relative group">
+<div class="text-7xl md:text-8xl font-light text-primary/10 absolute -top-8 -left-4 z-0 group-hover:text-primary/20 transition-all duration-500 select-none">02</div>
+<div class="relative z-10 space-y-3 pt-4">
+<h4 class="font-bold text-slate-900">Образцы</h4>
+<p class="text-sm text-slate-500">Согласование деталей и заказ тестовых партий.</p>
+</div>
+</div>
+<div class="relative group">
+<div class="text-7xl md:text-8xl font-light text-primary/10 absolute -top-8 -left-4 z-0 group-hover:text-primary/20 transition-all duration-500 select-none">03</div>
+<div class="relative z-10 space-y-3 pt-4">
+<h4 class="font-bold text-slate-900">Контроль</h4>
+<p class="text-sm text-slate-500">Инспекция на фабрике перед отгрузкой заказа.</p>
+</div>
+</div>
+<div class="relative group">
+<div class="text-7xl md:text-8xl font-light text-primary/10 absolute -top-8 -left-4 z-0 group-hover:text-primary/20 transition-all duration-500 select-none">04</div>
+<div class="relative z-10 space-y-3 pt-4">
+<h4 class="font-bold text-slate-900">Импорт</h4>
+<p class="text-sm text-slate-500">Таможня и доставка груза на ваш склад в РФ.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing -->
+<section class="py-24 border-t border-slate-100" id="pricing">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">Форматы сотрудничества</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
+<!-- Базовый -->
+<div class="bg-white border border-slate-100 p-8 rounded-xl flex flex-col h-full">
+<h3 class="text-lg font-bold mb-1">Базовый</h3>
+<p class="text-xs text-slate-400 mb-2 font-medium">Подбор фабрик</p>
+<div class="font-bold text-primary mb-6 text-lg whitespace-nowrap">50 000 — 90 000 ₽</div>
+<div class="flex-1">
+<ul class="space-y-3 mb-6">
+<li class="flex items-start gap-3 text-xs text-slate-500"><span class="material-symbols-outlined text-xs text-primary mt-0.5">done</span> Анализ вашего запроса</li>
+<li class="flex items-start gap-3 text-xs text-slate-500"><span class="material-symbols-outlined text-xs text-primary mt-0.5">done</span> Поиск 5–10 производителей</li>
+<li class="flex items-start gap-3 text-xs text-slate-500"><span class="material-symbols-outlined text-xs text-primary mt-0.5">done</span> Глубокий аудит фабрик</li>
+<li class="flex items-start gap-3 text-xs text-slate-500"><span class="material-symbols-outlined text-xs text-primary mt-0.5">done</span> Сбор коммерческих предложений</li>
+<li class="flex items-start gap-3 text-xs text-slate-500"><span class="material-symbols-outlined text-xs text-primary mt-0.5">done</span> Сравнение условий и цен</li>
+<li class="flex items-start gap-3 text-xs text-slate-500"><span class="material-symbols-outlined text-xs text-primary mt-0.5">done</span> Передача контактов</li>
+</ul>
+<div class="p-3 bg-slate-50 rounded-lg mb-6">
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Результат</p>
+<p class="text-xs text-slate-700 font-medium leading-tight">Проверенные фабрики и реальные цены производства</p>
+</div>
+</div>
+<button class="w-full py-3 rounded-lg border border-slate-200 text-sm font-semibold hover:bg-slate-50 transition-colors">Выбрать</button>
+</div>
+<!-- Старт производства -->
+<div class="bg-white border-2 border-primary p-8 rounded-xl flex flex-col h-full shadow-2xl shadow-primary/5 relative z-10">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white px-3 py-1 rounded text-[10px] font-bold uppercase tracking-widest">Популярный выбор</div>
+<h3 class="text-lg font-bold mb-1">Старт производства</h3>
+<p class="text-xs text-slate-400 mb-2 font-medium">Продукт и образцы</p>
+<div class="font-bold text-primary mb-6 text-lg whitespace-nowrap">150 000 — 250 000 ₽</div>
+<div class="flex-1">
+<ul class="space-y-3 mb-6">
+<li class="flex items-start gap-3 text-xs text-slate-500 font-bold"><span class="material-symbols-outlined text-xs text-primary mt-0.5">add</span> Включает пакет «Базовый»</li>
+<li class="flex items-start gap-3 text-xs text-slate-500"><span class="material-symbols-outlined text-xs text-primary mt-0.5">done</span> Переговоры с фабриками</li>
+<li class="flex items-start gap-3 text-xs text-slate-500"><span class="material-symbols-outlined text-xs text-primary mt-0.5">done</span> Согласование ТЗ</li>
+<li class="flex items-start gap-3 text-xs text-slate-500"><span class="material-symbols-outlined text-xs text-primary mt-0.5">done</span> Точный расчет стоимости</li>
+<li class="flex items-start gap-3 text-xs text-slate-500"><span class="material-symbols-outlined text-xs text-primary mt-0.5">done</span> Заказ и проверка образцов</li>
+<li class="flex items-start gap-3 text-xs text-slate-500"><span class="material-symbols-outlined text-xs text-primary mt-0.5">done</span> Фото и видео отчеты</li>
+<li class="flex items-start gap-3 text-xs text-slate-500"><span class="material-symbols-outlined text-xs text-primary mt-0.5">done</span> Отправка образцов в РФ</li>
+</ul>
+<div class="p-3 bg-primary/5 rounded-lg mb-6">
+<p class="text-[10px] font-bold text-primary/60 uppercase tracking-wider mb-1">Результат</p>
+<p class="text-xs text-slate-900 font-bold leading-tight">Готовый продукт для запуска производства</p>
+</div>
+</div>
+<button class="w-full py-3 rounded-lg bg-primary text-white text-sm font-bold hover:bg-slate-800 transition-colors">Выбрать</button>
+</div>
+<!-- Под ключ -->
+<div class="bg-white border border-slate-100 p-8 rounded-xl flex flex-col h-full">
+<h3 class="text-lg font-bold mb-1">Производство под ключ</h3>
+<p class="text-xs text-slate-400 mb-2 font-medium">Полное сопровождение</p>
+<div class="font-bold text-primary mb-6 text-lg whitespace-nowrap">от 250 000 ₽ + 10%</div>
+<div class="flex-1">
+<ul class="space-y-3 mb-6">
+<li class="flex items-start gap-3 text-xs text-slate-500"><span class="material-symbols-outlined text-xs text-primary mt-0.5">done</span> Размещение и ведение заказа</li>
+<li class="flex items-start gap-3 text-xs text-slate-500"><span class="material-symbols-outlined text-xs text-primary mt-0.5">done</span> Контроль этапов производства</li>
+<li class="flex items-start gap-3 text-xs text-slate-500"><span class="material-symbols-outlined text-xs text-primary mt-0.5">done</span> Пре-отгрузочная инспекция</li>
+<li class="flex items-start gap-3 text-xs text-slate-500"><span class="material-symbols-outlined text-xs text-primary mt-0.5">done</span> Фото и видео инспекция партии</li>
+<li class="flex items-start gap-3 text-xs text-slate-500"><span class="material-symbols-outlined text-xs text-primary mt-0.5">done</span> Организация упаковки</li>
+<li class="flex items-start gap-3 text-xs text-slate-500"><span class="material-symbols-outlined text-xs text-primary mt-0.5">done</span> Логистика и ВЭД-поддержка</li>
+<li class="flex items-start gap-3 text-xs text-slate-500"><span class="material-symbols-outlined text-xs text-primary mt-0.5">done</span> Полное сопровождение сделки</li>
+</ul>
+<div class="p-3 bg-slate-50 rounded-lg mb-6">
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Результат</p>
+<p class="text-xs text-slate-700 font-medium leading-tight">Готовая продукция с нулевым участием клиента</p>
+</div>
+</div>
+<button class="w-full py-3 rounded-lg border border-slate-200 text-sm font-semibold hover:bg-slate-50 transition-colors">Выбрать</button>
+</div>
+<!-- Личная консультация -->
+<div class="bg-white border border-slate-100 p-8 rounded-xl flex flex-col h-full">
+<h3 class="text-lg font-bold mb-1">Личная консультация</h3>
+<p class="text-xs text-slate-400 mb-2 font-medium">Индивидуальный разбор</p>
+<div class="font-bold text-primary mb-6 text-lg whitespace-nowrap">15 000 ₽ / 1 час</div>
+<div class="flex-1">
+<ul class="space-y-3 mb-6">
+<li class="flex items-start gap-3 text-xs text-slate-500"><span class="material-symbols-outlined text-xs text-primary mt-0.5">help_center</span> Разбор специфики вашего ниши в Китае</li>
+<li class="flex items-start gap-3 text-xs text-slate-500"><span class="material-symbols-outlined text-xs text-primary mt-0.5">done</span> Рекомендации по поиску фабрик</li>
+<li class="flex items-start gap-3 text-xs text-slate-500"><span class="material-symbols-outlined text-xs text-primary mt-0.5">done</span> Расчет предварительной себестоимости</li>
+<li class="flex items-start gap-3 text-xs text-slate-500"><span class="material-symbols-outlined text-xs text-primary mt-0.5">done</span> Анализ логистики и таможни</li>
+<li class="flex items-start gap-3 text-xs text-slate-500"><span class="material-symbols-outlined text-xs text-primary mt-0.5">done</span> Стратегия запуска производства</li>
+</ul>
+<div class="p-3 bg-slate-50 rounded-lg mb-6">
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Результат</p>
+<p class="text-xs text-slate-700 font-medium leading-tight">Пошаговый план работы с Китаем по вашему продукту</p>
+</div>
+</div>
+<button class="w-full py-3 rounded-lg border border-slate-200 text-sm font-semibold hover:bg-slate-50 transition-colors">Записаться</button>
+</div>
+</div>
+</section>
+<!-- Contact -->
+<section class="py-24" id="contact">
+<div class="bg-background-muted rounded-2xl p-12 md:p-20 text-center">
+<h2 class="text-4xl font-bold text-slate-900 mb-6">Обсудим вашу задачу?</h2>
+<p class="text-slate-500 mb-10 max-w-xl mx-auto text-lg">Оставьте заявку в удобном мессенджере. Мы проведем первичный аудит вашего запроса в течение рабочего дня.</p>
+<div class="flex flex-wrap justify-center gap-4">
+                        <a class="flex items-center gap-3 bg-[#0088cc] text-white px-8 py-4 rounded-lg font-bold hover:opacity-90 transition-all" href="https://t.me/hloya_live" target="_blank">
+                            <svg class="w-6 h-6 fill-current" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.52-1.4.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.45-.42-1.39-.89.03-.24.36-.49.99-.75 3.88-1.69 6.46-2.81 7.76-3.34 3.69-1.51 4.45-1.77 4.95-1.78.11 0 .36.03.52.16.13.1.17.23.19.33.02.09.02.26 0 .42z"></path></svg>
+                            Telegram
+                        </a>
+                        <a class="flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-lg font-bold hover:opacity-90 transition-all" href="tel:+79141178383">
+                            <span class="material-symbols-outlined">call</span>
+                            +7 (914) 117-83-83
+                        </a>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="border-t border-slate-100 py-12 px-6">
+<div class="mx-auto max-w-[1200px] flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">precision_manufacturing</span>
+<span class="font-bold text-slate-900">Evgenia Prus</span>
+</div>
+<nav class="flex flex-wrap items-center justify-center gap-6">
+<a class="text-xs text-slate-400 hover:text-primary transition-colors" href="#">Политика конфиденциальности</a>
+<a class="text-xs text-slate-400 hover:text-primary transition-colors" href="#">Правовая информация</a>
+</nav>
+<p class="text-xs text-slate-400">© 2024. Все права защищены.</p>
+</div>
+</footer>
+</div>
+</div>
+    <script>
+        const container = document.getElementById('gallery-container');
+        const prevBtn = document.getElementById('gallery-prev');
+        const nextBtn = document.getElementById('gallery-next');
+
+        if (container && prevBtn && nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                container.scrollBy({ left: 420, behavior: 'smooth' });
+            });
+            prevBtn.addEventListener('click', () => {
+                container.scrollBy({ left: -420, behavior: 'smooth' });
+            });
+        }
+    </script>
+</body></html>
