@@ -211,31 +211,31 @@
                 <div class="relative group">
                     <div id="gallery-container" class="flex gap-4 overflow-x-auto hide-scrollbar snap-x snap-mandatory -mx-6 px-6 md:mx-0 md:px-0 scroll-smooth">
                         <!-- Photo 1 -->
-                        <div class="w-28 h-20 md:w-[400px] md:h-auto md:aspect-[4/3] rounded-lg overflow-hidden snap-start flex-shrink-0 bg-slate-100">
+                        <div class="w-64 aspect-[4/5] md:w-[400px] md:h-auto md:aspect-[4/3] rounded-lg overflow-hidden snap-start flex-shrink-0 bg-slate-100">
                             <img alt="Factory Image" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="Фото/photo_2026-03-05_15-19-17.jpg"/>
                         </div>
                         <!-- Photo 2 -->
-                        <div class="w-28 h-20 md:w-[400px] md:h-auto md:aspect-[4/3] rounded-lg overflow-hidden snap-start flex-shrink-0 bg-slate-100">
+                        <div class="w-64 aspect-[4/5] md:w-[400px] md:h-auto md:aspect-[4/3] rounded-lg overflow-hidden snap-start flex-shrink-0 bg-slate-100">
                             <img alt="Factory Image" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="Фото/photo_2026-03-05_15-20-08.jpg"/>
                         </div>
                         <!-- Photo 3 -->
-                        <div class="w-28 h-20 md:w-[400px] md:h-auto md:aspect-[4/3] rounded-lg overflow-hidden snap-start flex-shrink-0 bg-slate-100">
+                        <div class="w-64 aspect-[4/5] md:w-[400px] md:h-auto md:aspect-[4/3] rounded-lg overflow-hidden snap-start flex-shrink-0 bg-slate-100">
                             <img alt="Factory Image" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="Фото/photo_2026-03-05_15-26-14.jpg"/>
                         </div>
                         <!-- Photo 4 -->
-                        <div class="w-28 h-20 md:w-[400px] md:h-auto md:aspect-[4/3] rounded-lg overflow-hidden snap-start flex-shrink-0 bg-slate-100">
+                        <div class="w-64 aspect-[4/5] md:w-[400px] md:h-auto md:aspect-[4/3] rounded-lg overflow-hidden snap-start flex-shrink-0 bg-slate-100">
                             <img alt="Factory Image" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="Фото/photo_2026-03-05_15-26-30.jpg"/>
                         </div>
                         <!-- Photo 5 -->
-                        <div class="w-28 h-20 md:w-[400px] md:h-auto md:aspect-[4/3] rounded-lg overflow-hidden snap-start flex-shrink-0 bg-slate-100">
+                        <div class="w-64 aspect-[4/5] md:w-[400px] md:h-auto md:aspect-[4/3] rounded-lg overflow-hidden snap-start flex-shrink-0 bg-slate-100">
                             <img alt="Factory Image" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="Фото/photo_2026-03-05_15-26-45.jpg"/>
                         </div>
                         <!-- Photo 6 -->
-                        <div class="w-28 h-20 md:w-[400px] md:h-auto md:aspect-[4/3] rounded-lg overflow-hidden snap-start flex-shrink-0 bg-slate-100">
+                        <div class="w-64 aspect-[4/5] md:w-[400px] md:h-auto md:aspect-[4/3] rounded-lg overflow-hidden snap-start flex-shrink-0 bg-slate-100">
                             <img alt="Factory Image" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="Фото/photo_2026-03-05_15-27-34.jpg"/>
                         </div>
                         <!-- Photo 7 -->
-                        <div class="w-28 h-20 md:w-[400px] md:h-auto md:aspect-[4/3] rounded-lg overflow-hidden snap-start flex-shrink-0 bg-slate-100">
+                        <div class="w-64 aspect-[4/5] md:w-[400px] md:h-auto md:aspect-[4/3] rounded-lg overflow-hidden snap-start flex-shrink-0 bg-slate-100">
                             <img alt="Factory Image" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="Фото/photo_2026-03-16_18-57-36.jpg"/>
                         </div>
                     </div>
@@ -423,11 +423,11 @@
 
         if (container && prevBtn && nextBtn) {
             nextBtn.addEventListener('click', () => {
-                const scrollAmount = window.innerWidth < 768 ? 130 : 420;
+                const scrollAmount = window.innerWidth < 768 ? 270 : 420;
                 container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
             });
             prevBtn.addEventListener('click', () => {
-                const scrollAmount = window.innerWidth < 768 ? 130 : 420;
+                const scrollAmount = window.innerWidth < 768 ? 270 : 420;
                 container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
             });
         }
